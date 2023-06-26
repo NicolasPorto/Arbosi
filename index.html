@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Arbosi - Control is now!</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="assets/icone.png"/>
+    </head>
+
+    <body>
+
+        <div id="centerUm" >
+
+            <div class="centerDois">
+
+                <div class="containerUm">
+                        
+                        <div class="form">
+
+                            <div class="tituloArbosi">
+                                <h3>Arbosi</h3>
+                                <img class="iconeArbosi" src="assets/icone.png">
+                            </div>
+
+                            <div class="form-input-container">
+
+                                <div class="box1">
+
+                                    <div class="tomada1box1">
+                                        <h6 style="font-size:120%">T1</h6>
+
+                                        <label class="switch">
+                                            <input type="checkbox" id="tomadaUm" value="false">
+                                            <span class="slider round" id="sliderUm"></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="tomada2box1">
+                                        <h6 style="font-size:120%">T2</h6>
+
+                                        <label class="switch">
+                                            <input title="temperature low" type="checkbox" id="tomadaDois" value="false">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                    <p id="celcius"></p>
+                                </div>
+                                <div class="box2">
+                                    <div class="tomada1box2">
+                                        <h6>Corrente UM</h6>
+                                        <p id="correnteA"></p>
+                                    </div>
+
+                                    <div class="tomada2box2">
+                                        <h6>Corrente DOIS</h6>
+                                        <p id="correnteB"></p>
+                                    </div>
+                                </div>
+                                <div class="box3">
+
+                                    <div class="tomada1box3">
+                                        <h6>Potência UM</h6>
+                                        <p id="potenciaA"></p>
+                                    </div>
+
+                                    <div class="tomada1box3">
+                                        <h6>Potência DOIS</h6>
+                                        <p id="potenciaB"></p>
+                                    </div>
+                                </div> 
+                                
+                            </div>
+
+                            <div class="form-input-container">
+
+                                <div class="box4">
+                                    <div class="umidadeBox">
+                                        <h6>Umidade</h6>
+                                        <p id="umidadeA"></p>
+                                    </div>
+                                    <div class="temperaturaBox">
+                                        <h6>Temperatura</h6>
+                                        <p id="temperaturaA"></p>
+                                    </div>
+
+                                    <div class="presencaBox">
+                                        <h6>Presença</h6>
+                                        <p id="presencaSala"></p>
+                                    </div>
+
+                                    <p id="celcius"></p>
+                                </div>
+                                <div class="box5">
+                                    
+                                    <div class="tomada1box5">
+                                        <h6>Consumo UM</h6>
+                                        <p id="consumoA"></p>
+                                    </div>
+
+                                    <div class="tomada1box5">
+                                        <h6>Consumo DOIS</h6>
+                                        <p id="consumoB"></p>
+                                    </div>
+
+                                    <p id="fahrenheit"></p>
+                                </div>
+                                
+                            </div>  
+                        </div>
+                </div>
+
+                <div class="agentamentoBody">
+                    <div class="containerDois">
+                        <div class="box6">
+                            <div class="tituloLight">
+                                <strong class="Agende">Agende a</strong>
+                                <strong class="Luz" id="luz">ENERGIA.</strong>
+                            </div>
+    
+                            <div class="radioButton">
+                                <input type="radio" id="tomadaUmRadio" name="fav_language" value="tomadaUm" checked>
+                                <label class="radioUm" for="tomadaUmRadio">Tomada 1 |</label>
+
+                                <input type="radio" id="tomadaDoisRadio" name="fav_language" value="tomadaDois">
+                                <label class="radioDois" for="tomadaDoisRadio">Tomada 2</label><br>
+                            </div>
+
+                            <form onsubmit="clickButton()">
+                                <div class="inputTime">
+                                    <input type="time" id="timerLigar" name="appt" placeholder="00/00" required>
+                                    <input type="time" id="timerDesligar" name="appt" required>
+                                </div>
+
+                                <div>
+                                    <button type="submit" class="buttonAgendamento">Agendar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="containerTres">
+                        <div class="T1">
+                            <div id="circuloTomadaUm"></div>
+                            <h6>Tomada 1</h6>
+                        </div>
+                        <div class="T2">
+                            <div id="circuloTomadaDois"></div>
+                            <h6>Tomada 2</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="retangulo"></div>
+            
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+        <script src="script.js" defer></script>
+    </body>
+</html>
